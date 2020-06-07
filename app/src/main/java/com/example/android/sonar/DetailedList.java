@@ -14,18 +14,10 @@ public class DetailedList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_list);
 
-        ArrayList<Item> num= new ArrayList<Item>();
+        ArrayList<Item> num=new ArrayList<Item>();
+        num=(ArrayList<Item>) getIntent().getSerializableExtra("nume");
 
-        num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
-        num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
-        num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
 
-        num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
-        num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
-        num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
-        num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
-        num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
-        num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
 
         //LinearLayout linearLayout=(LinearLayout)findViewById(R.id.root);
 

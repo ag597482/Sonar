@@ -1,6 +1,8 @@
 package com.example.android.sonar;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
 
     private String mM,mE;
     int mI=-1;

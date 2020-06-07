@@ -17,6 +17,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.android.sonar.DetailedList;
+import com.example.android.sonar.Item;
 import com.example.android.sonar.ItemList;
 import com.example.android.sonar.Jewelry;
 import com.example.android.sonar.JewelryAdapter;
@@ -28,7 +29,7 @@ public class HomeFragment extends Fragment {
 
 
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    public View onCreateView(@NonNull final LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -69,7 +70,25 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
+
+
+
                 Intent i=new Intent(getContext(), DetailedList.class);
+                ArrayList<Item> num= new ArrayList<Item>();
+
+                num.add(new Item("lutti "+ position,"one" + position,R.drawable.ic_menu_camera));
+                num.add(new Item("tlutti","tone"+ position,R.drawable.ic_menu_camera));
+                num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
+
+                num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
+                num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
+                num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
+                num.add(new Item("lutti","one",R.drawable.ic_menu_camera));
+                num.add(new Item("tlutti","tone",R.drawable.ic_menu_camera));
+                num.add(new Item("lutti"+ position,"one"+ position,R.drawable.ic_menu_camera));
+
+                i.putExtra("nume",num);
                 startActivity(i);
                 //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                    //     new ItemList()).commit();
