@@ -23,42 +23,31 @@ public class JewelryAdapter extends ArrayAdapter<Jewelry> {
         super(context,0, jewelryList);
     }
 
-//    @NonNull
-//    @Override
-//    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-//
-//        View listItemView = convertView;
-//        if(listItemView == null) {
-//            listItemView = LayoutInflater.from(getContext()).inflate(
-//                    R.layout.list_item, parent, false);
-//        }
-//
-//        Word cw = getItem(position);
-//
-//        TextView mw = (TextView) listItemView.findViewById(R.id.miwok);
-//        mw.setText(cw.getM());
-//
-//        TextView ew = (TextView) listItemView.findViewById(R.id.eng);
-//        ew.setText(cw.getE());
-//
-//
-//        ImageView iw = (ImageView) listItemView.findViewById(R.id.im);
-//
-//        if(cw.hasImage()) {
-//            iw.setImageResource(cw.getI());
-//            iw.setVisibility(View.VISIBLE);
-//        }
-//        else
-//        {
-//            iw.setVisibility(View.GONE);
-//        }
-//        View tc = listItemView.findViewById(R.id.textc);
-//
-//        int cl= ContextCompat.getColor(getContext(),col);
-//        tc.setBackgroundColor(cl);
-//
-//        return listItemView;
-//    }
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+        View listItemView = convertView;
+        if(listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.list_item, parent, false);
+        }
+
+        Jewelry cw = getItem(position);
+
+        TextView mw = (TextView) listItemView.findViewById(R.id.jewelryTitle);
+        mw.setText(cw.getTitle());
+
+
+
+        ImageView iw = (ImageView) listItemView.findViewById(R.id.imageView);
+
+        iw.setImageResource(cw.getImage());
+
+
+
+        return listItemView;
+    }
 
     //    @NonNull
 //    @Override
