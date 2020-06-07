@@ -8,4 +8,5 @@ android:id="@+id/detail_list"
 tools:context=".DetailedList">
 
 
+
 </ListView>
