@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.android.sonar.Jewelry;
+import com.example.android.sonar.JewelryAdapter;
 import com.example.android.sonar.R;
 
 import java.util.ArrayList;
@@ -27,29 +29,32 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        ArrayList<String> arrayList = new ArrayList<String>();
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
-        arrayList.add("mana");
+        ArrayList<Jewelry> jeweleryList= new ArrayList<Jewelry>();
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,arrayList);
+        jeweleryList.add(new Jewelry(1, "Necklace", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(2, "Ring", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(3, "Bangles", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(4, "Chain", R.drawable.ic_launcher_background));
+
+        jeweleryList.add(new Jewelry(1, "Necklace", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(2, "Ring", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(3, "Bangles", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(4, "Chain", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(1, "Necklace", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(2, "Ring", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(3, "Bangles", R.drawable.ic_launcher_background));
+        jeweleryList.add(new Jewelry(4, "Chain", R.drawable.ic_launcher_background));
+
+        JewelryAdapter jewelryAdapter = new JewelryAdapter(getContext(),jeweleryList);
+
+
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,arrayList);
         GridView gridView = root.findViewById(R.id.mainlist);
 
 
+        gridView.setAdapter(jewelryAdapter);
 
-        gridView.setAdapter(adapter);
 
 //        final TextView textView = root.findViewById(R.id.text_home);
 //

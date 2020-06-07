@@ -49,38 +49,5 @@ public class JewelryAdapter extends ArrayAdapter<Jewelry> {
         return listItemView;
     }
 
-    //    @NonNull
-//    @Override
-//    public JewelryAdapter.JewelryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        LayoutInflater inflater = LayoutInflater.from(mCtx);
-//        View view = inflater.inflate(R.layout.activity_jewelry_list, null);
-//        return new JewelryViewHolder(view);
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(@NonNull JewelryAdapter.JewelryViewHolder holder, int position) {
-//        //getting the product of the specified position
-//        Jewelry jewelry = jewelryList.get(position);
-//
-//        //binding the data with the viewholder views
-//        holder.textViewTitle.setText(jewelry.getTitle());
-//        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(jewelry.getImage()));
-//    }
-//
-//    @Override
-//    public int getItemCount() {
-//        return jewelryList.size();
-//    }
-//    class JewelryViewHolder extends RecyclerView.ViewHolder {
-//
-//        TextView textViewTitle;
-//        ImageView imageView;
-//
-//        public JewelryViewHolder(View itemView) {
-//            super(itemView);
-//
-//            textViewTitle = itemView.findViewById(R.id.jewelryTitle);
-//            imageView = itemView.findViewById(R.id.imageView);
-//        }
-//    }
+
 }

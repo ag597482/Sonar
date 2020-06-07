@@ -1,7 +1,7 @@
 package com.example.android.sonar;
 
 
-class Jewelry {
+public class Jewelry {
     private int id;
     private String title;
     private int image;
