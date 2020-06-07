@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.android.sonar.ItemList;
 import com.example.android.sonar.Jewelry;
 import com.example.android.sonar.JewelryAdapter;
 import com.example.android.sonar.R;
@@ -57,6 +58,7 @@ public class HomeFragment extends Fragment {
         gridView.setAdapter(jewelryAdapter);
 
 
+
 //        final TextView textView = root.findViewById(R.id.text_home);
 //
 //        textView.setText("Home Aman");
@@ -64,6 +66,10 @@ public class HomeFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                   //     new ItemList()).commit();
 
             }
         });
