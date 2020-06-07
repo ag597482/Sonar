@@ -1,5 +1,6 @@
 package com.example.android.sonar.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.android.sonar.DetailedList;
 import com.example.android.sonar.ItemList;
 import com.example.android.sonar.Jewelry;
 import com.example.android.sonar.JewelryAdapter;
@@ -67,7 +69,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
+                Intent i=new Intent(getContext(), DetailedList.class);
+                startActivity(i);
                 //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                    //     new ItemList()).commit();
 

@@ -27,36 +27,36 @@ public class ItemAdapter extends ArrayAdapter<Item> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-//        View listItemView = convertView;
-//        if(listItemView == null) {
-//            listItemView = LayoutInflater.from(getContext()).inflate(
-//                    R.layout.detailed_list_item, parent, false);
-//        }
-//
-//        Item cw = getItem(position);
-//
-//        TextView mw = (TextView) listItemView.findViewById(R.id.miwok);
-//        mw.setText(cw.getM());
-//
-//        TextView ew = (TextView) listItemView.findViewById(R.id.eng);
-//        ew.setText(cw.getE());
-//
-//
-//        ImageView iw = (ImageView) listItemView.findViewById(R.id.im);
-//
-//        if(cw.hasImage()) {
-//            iw.setImageResource(cw.getI());
-//            iw.setVisibility(View.VISIBLE);
-//        }
-//        else
-//        {
-//            iw.setVisibility(View.GONE);
-//        }
-//        View tc = listItemView.findViewById(R.id.textc);
-//
-//        int cl= ContextCompat.getColor(getContext(),col);
-//        tc.setBackgroundColor(cl);
-//
-//        return listItemView;
+        View listItemView = convertView;
+        if(listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.detailed_list_item, parent, false);
+        }
+
+        Item cw = getItem(position);
+
+        TextView mw = (TextView) listItemView.findViewById(R.id.miwok);
+        mw.setText(cw.getM());
+
+        TextView ew = (TextView) listItemView.findViewById(R.id.eng);
+        ew.setText(cw.getE());
+
+
+        ImageView iw = (ImageView) listItemView.findViewById(R.id.im);
+
+        if(cw.hasImage()) {
+            iw.setImageResource(cw.getI());
+            iw.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            iw.setVisibility(View.GONE);
+        }
+        View tc = listItemView.findViewById(R.id.textc);
+
+        int cl= ContextCompat.getColor(getContext(),col);
+        tc.setBackgroundColor(cl);
+
+        return listItemView;
     }
 }
